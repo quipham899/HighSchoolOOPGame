@@ -1,1 +1,1 @@
-web: gunicorn Main.py:app
+web: gunicorn  "FlaskPythonOOP:create_app()"
