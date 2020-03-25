@@ -1,4 +1,7 @@
 import os
+from flask import (
+    Blueprint, flash, g, redirect, render_template, request, url_for
+)
 
 from flask import Flask
 def create_app(test_config=None):
@@ -23,15 +26,15 @@ def create_app(test_config=None):
         pass
 
     # a simple page that says hello
-    @app.route('/hello')
-    def hello():
-        return 'Hello, World!'
+    @app.route('/index')
+    def index():
+        return render_template('Game/index.html')
 
     from . import db
     db.init_app(app)
 
-    from . import blog
-    app.register_blueprint(blog.bp)
+    from . import Main
+    app.register_blueprint(Main.bp)
     app.add_url_rule('/', endpoint='index')
 
     return app
