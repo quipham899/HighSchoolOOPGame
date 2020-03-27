@@ -1,0 +1,27 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Flaskr</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+  <h1>The Hallway</h1>
+   <form method='post'>
+  <p>It's 12:00 AM you finally finished work, the same work that was assigned to you at about 5 in the evening yesterday.
+  Though some would look astonished at you if you were to tell them this, "It's inhuman!" they'd shout, but to you it's just another day.
+You hate this job, you really do but you know you have to keep going. After all the several thousands of dollars worth of student debt,
+doesn't pay itself. You get up and walk out of your cubicle, there are three figures in front of you they are all cloaked in darkness. You pinch yourself
+to make sure that you aren't in another nightmare, the ones that frequently plague your dreams. However the pinch did not do anything, the three dark shadow people stood there ...
+and they kept staring at you, you'd close your eyes and opened them again ... only to see your three co-workers.</p>
+<p>The first one is Mr.Bennington an old man in a suit, he stood at about your height which was 5'9 and he was carrying a coffee cup. You and Mr.Bennington were always on good-terms, he was one of the few people to help you out
+when you first started your job. You always saw him as a father figure and frequently chatted with him. </p>
+<p>The second is Linda Alvarez she is the source of attention for many men around the office including you, she has long thick black hair, beautiful cherry red-lips, and a very sharp set of eyes. She stands at around your height,
+  she was conversating with another man.</p>
+<p>The third man was Chad atkins you could recognize him anywhere, he was one of the top programmers in the company, and one of the most popular people in the company. Handsome, smart, successful, everything he was ... you weren't.
+  You tried your best to avoid him because being around him was like being around your mother, you'll be reminded constantly by a nagging voice of all the things you didn't do right ...</p>
+  <p>Since you're here you might as well go and try to conversate with people, come on now don't be shy.</p>
+  <p>1) Go talk to Mr. Bennington</p>
+  <p>2) Go talk to Linda </p>
+  <p>3) Go talk to Chad </p>
+  <p>4) Go home</p>
+   <input name="choice" id="choice" value="{{ request.form['choice'] }}" required>
+   <input type="submit" value="Save">
+ </form>
+</nav>

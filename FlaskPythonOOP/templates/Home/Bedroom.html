@@ -1,0 +1,22 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Flaskr</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+  {% block header %}
+  <h1>Mr.Bennington</h1>
+  {% endblock %}
+   <form method='post'>
+  <p>You exit the large industrial building and enter your car, you'd ignite the engine and drive off throug the city
+  as you did so the sky darkened and soon the sound of rain fall would accompany the silence of your ride. You drive home to an apartment
+in the rough side of town, the building is made of old red bricks that seem to have been worn out by time judging by the various discolorations
+that can be easily spotted. You would exit the car and enter the large white door at the entrance, you'd walk through the lobby and avoided making eye-contact
+and headed straight to your room. Your room was a small one room studio apartment ... though it was supposed to be your home, nothing could feel further from the truth.
+The bed was a cheap mattress that was dotted with stains, it was situated infront of the T.V, next to a table with several bowles of day old food litered all over it.
+The second half of the bedroom was a kitchen with barely enough room for a person. Well we're home anyways ... what do you want to do?</p>
+    <p>1). Go to sleep</p>
+    <p>2). Watch some TV</p>
+    <p>3). Go to the kitchen</p>
+    <input name="choice" id="choice" value="{{ request.form['choice'] }}" required>
+    <input type="submit" value="Submit">
+ </form>
+</nav>

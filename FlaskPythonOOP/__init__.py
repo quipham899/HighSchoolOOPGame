@@ -25,10 +25,6 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # a simple page that says hello
-    @app.route('/index')
-    def index():
-        return render_template('Game/index.html')
 
     from . import db
     db.init_app(app)

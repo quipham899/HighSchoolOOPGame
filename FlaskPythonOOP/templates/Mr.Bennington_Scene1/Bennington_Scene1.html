@@ -1,0 +1,18 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Flaskr</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+  {% block header %}
+  <h1>Mr.Bennington</h1>
+  {% endblock %}
+   <form method='post'>
+  <p>Geeze you alright there? You look pretty rough of course I can't blame you anyone would look like you too if they had to work the hours that you do.
+    At least you got your work done right? Also hey, I heard they were promoting someone soon! Maybe it could be you!</p>
+    <p>1). Yeah right, like they'd pick me.</p>
+    <p>2). I gotta go home and sleep.</p>
+    <p>3). How are you doing Mr.Bennington?</p>
+    <p>4). Did you see anyone else in this Hallway besides you three?</p>
+    <input name="choice" id="choice" value="{{ request.form['choice'] }}" required>
+    <input type="submit" value="Submit">
+ </form>
+</nav>
