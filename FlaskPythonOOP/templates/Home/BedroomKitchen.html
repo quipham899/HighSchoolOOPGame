@@ -1,0 +1,17 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Flaskr</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+  {% block header %}
+  <h1>Mr.Bennington</h1>
+  {% endblock %}
+   <form method='post'>
+  <p>You go to the Kitchen to grab something to eat when you notice that your water is turned on ... that's strange you thought to yourself
+  .</p>
+    <p>1). Go to sleep</p>
+    <p>2). Watch some TV</p>
+    <p>3). Go to the kitchen</p>
+    <input name="choice" id="choice" value="{{ request.form['choice'] }}" required>
+    <input type="submit" value="Submit">
+ </form>
+</nav>

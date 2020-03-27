@@ -18,11 +18,23 @@ def index():
 @bp.route('/Bennington_Scene1', methods=('GET', 'POST'))
 def Bennington_Scene1():
     if request.method == 'POST':
+        choice = request.form['choice']
         if int(choice) == 1:
             return redirect(url_for('Main.Bennington_Scene1Act1'))
         elif int(choice) == 2:
             return redirect(url_for('Main.Bedroom'))
-        elif int(choice) == 3:
+        else:
             return redirect(url_for('Main.index'))
-        elif int(choice) == 2:
     return render_template('Mr.Bennington_Scene1/Bennington_Scene1.html')
+
+@bp.route('/Bedroom', methods=('GET', 'POST'))
+def Bedroom():
+    if request.method == 'POST':
+        choice = request.form['choice']
+        if int(choice) == 1:
+            return redirect(url_for('Main.Day2'))
+        elif int(choice) == 2:
+            return redirect(url_for('Main.BedroomKitchen'))
+        else:
+            return redirect(url_for('Main.BedroomTV'))
+    return render_template('Home/Bedroom.html')

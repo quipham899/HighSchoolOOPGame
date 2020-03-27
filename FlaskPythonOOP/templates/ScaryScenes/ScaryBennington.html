@@ -1,0 +1,21 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Flaskr</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+  {% block header %}
+  <h1>Mr.Bennington</h1>
+  {% endblock %}
+   <form method='post'>
+  <p>What? No, there isn't anyone here ... (he laughs in amusement), perhaps you saw the Ghost of the local building. What ... you never heard of
+  the stories? Really? It was all the rage a while back, well let me tell you the story. So about ten years back there was a man named Ted Rogers who worked here,
+Ted was much like you ... except he had a family, not that uhhh ... there's anything wrong with you. Anyways, Ted busted his balls for his family often spending
+late nights working all so that he can see his wife and daughter on the Weekends. Now I knew Ted personally, and he was a cheerful guy ... really terrific guy,
+always said 'hi' to you and always made time to help others. So I knew something was wrong when he came in one day and didn't talk at all ... he just had a dejected look in his eyes,
+and didn't answer when anyone asked him what was wrong. Later that day the Police showed up and asked for him it turned out he had murdered his wife after he found her in bed with another man,
+he blew her brains out with a shot gun. When we came to check on him in his office, we found him hanging from the ceiling fan ... after that some ... strange occurence have happened in the Office.
+I personally don't believe it though.(For a moment you can swear that you saw his eyes turn pitch-black, though as soon as you blinked it turned back to normal)  </p>
+    <p>1). Hmmh ... thanks for telling me, I gotta go now though ...</p>
+    <input name="choice" id="choice" value="{{ request.form['choice'] }}" required>
+    <input type="submit" value="Submit">
+ </form>
+</nav>
